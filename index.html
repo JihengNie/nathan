@@ -3,8 +3,72 @@
   <head>
     <title>This is Nathan!</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="scripts.js"></script>
   </head>
   <body>
-    <img src="assets/logo.png"></img>
+    <section>
+        <h1 class="text-left">This is Nathan</h1>
+    </section>
+    <swiper-container class="mySwiper h-full w-full" autoplay-delay="1500">
+        <swiper-slide>
+            <img src="assets/nathan-1.png"></img>
+        </swiper-slide>
+        <swiper-slide>
+            <img src="assets/nathan-2.png"></img>
+        </swiper-slide>
+        <swiper-slide>
+            <img src="assets/nathan-3.png"></img>
+        </swiper-slide>
+    </swiper-container>
+
+    <section class="section-quotes">
+        <h1 class="text-left">This is what Nathan says</h1>
+        <ul class="list-disc px-20">
+            <li>My nuts</li>
+            <li>Ain't no damn way I'm fps'ing tonight</li>
+            <li>Shut up weiner boy</li>
+            <li>Fortunately it's the left which is just the WASD hand so I should be good to go</li>
+            <li>Cut my thumb right on the tip on a corn stalk</li>
+            <li>i was actually at the little medical place because I got a booboo</li>
+            <li>your balls</li>
+            <li>have you tried an umbrella</li>
+            <li>Going back to Kansass for the weekend, expect Tim pics</li>
+            <li>but this time I'm adding a secret extra tool</li>
+            <li>BF4 SERVER BROWSER SUPREMACY</li>
+            <li>Anyway. Bedtime for me, I thought I'd share. I know Seth and I plan to play some this Winter Break, so it'd be awesome to have a third</li>
+            <li>sorry fellas, got HELLA distracted</li>
+        </ul>
+    </section>
+
+    <script>
+        const swiperEl = document.querySelector('swiper-container')
+        Object.assign(swiperEl, {
+            slidesPerView: 1,
+            slidesOffsetBefore: 0,
+            loop: true,
+            slidesOffsetafter: 0,
+            breakpoints: {
+                640: {
+                    slidesPerView: 2
+                },
+                768: {
+                    slidesPerView: 2
+                },
+                1024: {
+                    slidesPerView: 2
+                },
+            },
+        });
+        swiperEl.initialize();
+    </script>
   </body>
 </html>
