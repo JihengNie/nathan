@@ -15,22 +15,60 @@
     <script src="scripts.js"></script>
   </head>
   <body>
-    <section>
-        <h1 class="text-left">This is Nathan</h1>
-    </section>
-    <swiper-container class="mySwiper h-full w-full" autoplay-delay="1500">
-        <swiper-slide>
-            <img src="assets/nathan-1.png"></img>
-        </swiper-slide>
-        <swiper-slide>
-            <img src="assets/nathan-2.png"></img>
-        </swiper-slide>
-        <swiper-slide>
-            <img src="assets/nathan-3.png"></img>
-        </swiper-slide>
-    </swiper-container>
+    <header>
+        <a href="#" class="text-center block w-full mb-8" js-play-nathan-song>
+            Click me to see Nathan's favorite song
+        </a>
+        <div id="videoContainer" class="hidden" js-nathan-song>
+            <iframe width="882" height="496"  class="mx-auto"
+                src="https://www.youtube.com/embed/MtN1YnoL46Q?list=RDMtN1YnoL46Q" 
+                title="The Duck Song" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </header>
+    <section class="max-w-[1024px] mx-auto">
+        <div class="rounded-full overflow-hidden mx-auto mb-4 max-w-[30%] max-h-[30%]">
+            <img class="aspect-square object-cover" src="assets/nathan-mugshot.png"></img>
+        </div>
+        <h1 class="text-center">In rememberence of Nathan Smith</h1>
+        <p class="mb-4">"In loving memory of Nathan Smith, whose kindness, generosity, and infectious laughter brightened the lives of everyone who knew him. This space is dedicated to celebrating his life, his passions, and the lasting impact he had on our hearts."</p>
+        <p class="mb-4">"Nathan Smith was born on [Date] and spent his life making the world a better place with his genuine care for others. Whether through his work, friendships, or family, Nathan's love for life and people was evident in everything he did. He had a remarkable talent for [mention passions or skills], and his presence will be deeply missed by all who had the privilege of knowing him."</p>
 
-    <section class="section-quotes">
+    </section>
+    <section class="section__carousel max-w-[1024px] mx-auto">
+        <swiper-container class="mySwiper h-full w-full" autoplay-delay="1500">
+            <swiper-slide>
+                <img src="assets/nathan-1.png"></img>
+            </swiper-slide>
+            <swiper-slide>
+                <img src="assets/nathan-2.png"></img>
+            </swiper-slide>
+            <swiper-slide>
+                <img src="assets/nathan-3.png"></img>
+            </swiper-slide>
+            <swiper-slide>
+                <img src="assets/nathan-4.png"></img>
+            </swiper-slide>
+            <swiper-slide>
+                <img src="assets/nathan-5.png"></img>
+            </swiper-slide>
+            <swiper-slide>
+                <img src="assets/nathan-6.png"></img>
+            </swiper-slide>
+            <swiper-slide>
+                <img src="assets/nathan-7.png"></img>
+            </swiper-slide>
+            <swiper-slide>
+                <img src="assets/nathan-8.png"></img>
+            </swiper-slide>
+        </swiper-container>
+    </section>
+
+    <section class="section__quotes max-w-[1024px] mx-auto">
         <h1 class="text-left">This is what Nathan says</h1>
         <ul class="list-disc px-20">
             <li>My nuts</li>
@@ -49,22 +87,35 @@
         </ul>
     </section>
 
+    <section class="section__50-50 max-w-[1024px] mx-auto">
+        <h1>Nathan loved the clubs. He was a club man</h1>
+        <div class="grid grid-cols-2 gap-[16px]">
+            <img class="aspect-square object-cover rounded-[4px] overflow-hidden" src="assets/nathan-chair.png"></img>
+            <img class="aspect-square object-cover rounded-[4px] overflow-hidden" src="assets/nathan-wall.png"></img>
+        </div>
+        <p>
+            Nathan Smith was a quiet presence at The Junction, the local club where he’d made his mark without ever trying to. 
+            He wasn’t the loudest or most in-your-face person, but there was something about him that made people listen. 
+            He’d started coming three months ago, blending into the background with his leather jacket and calm demeanor. 
+            Over time, though, he became the steady force everyone relied on. When a fight broke out one night, Nathan didn’t rush in; he simply approached the scene, placed a hand on the troublemaker’s shoulder, and spoke with quiet authority, defusing the tension in an instant. It wasn’t about being a hero—it was about knowing how to keep the peace with subtlety and confidence. He wasn’t here for attention, but everyone felt it when Nathan was around: things just seemed to go right when he was in the room.
+        </p>
+
+    </section>
+
     <script>
         const swiperEl = document.querySelector('swiper-container')
         Object.assign(swiperEl, {
-            slidesPerView: 1,
+            slidesPerView: 1.5,
             slidesOffsetBefore: 0,
             loop: true,
+            spaceBetween: 12,
             slidesOffsetafter: 0,
             breakpoints: {
                 640: {
-                    slidesPerView: 2
-                },
-                768: {
-                    slidesPerView: 2
+                    slidesPerView: 3
                 },
                 1024: {
-                    slidesPerView: 2
+                    slidesPerView: 4
                 },
             },
         });
