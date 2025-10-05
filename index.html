@@ -2,7 +2,6 @@
 <html>
   <head>
     <title>This is Nathan!</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
     <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
@@ -12,7 +11,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="scripts.js"></script>
   </head>
   <body>
     <header>
@@ -121,5 +119,65 @@
         });
         swiperEl.initialize();
     </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(e) {
+            const nathanPlayBtn = document.querySelector('[js-play-nathan-song]')
+            const nathanSong = document.querySelector('[js-nathan-song]')
+
+            nathanPlayBtn.addEventListener('click', (e) => {
+                e.preventDefault()
+                nathanSong.classList.remove('hidden')
+            })
+        });
+    </script>
+    <style>
+        .section__carousel swiper-slide {
+            height: auto;
+            aspect-ratio: 2/3;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .section__carousel swiper-slide img {
+            object-fit: cover;
+            object-position: top;
+            height: 100%;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        section {
+            margin: 16px auto;
+        }
+
+        p {
+            margin: 8px auto;
+        }
+
+        @media screen and (min-width: 1024px){
+            h1 {
+                font-size: 32px;
+            }
+        }
+
+        body {
+            padding: 16px;
+            color: white;
+            background: #020024;
+            background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 94%);
+        }
+
+        @media screen and (min-width: 1024px){
+            body {
+                padding: 32px;
+            }
+
+        }
+    </style>
   </body>
 </html>
