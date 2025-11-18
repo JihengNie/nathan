@@ -14,7 +14,7 @@
   </head>
   <body>
     <header>
-        <a href="#" class="text-center block w-full mb-8" js-play-nathan-song>
+        <a href="#" class="text-center block w-full mb-8 hover:underline" js-play-nathan-song>
             Click me to see Nathan's favorite song
         </a>
         <div id="videoContainer" class="hidden" js-nathan-song>
@@ -100,6 +100,15 @@
 
     </section>
 
+    <section class="section__babies max-w-[1024px] mx-auto">
+        <h1>Where does babies come from?</h1>
+        <p>Nathan always wonders where babies comes from...</p>
+        <p>After asking chatGPT, the answer was clear.</p>
+        <p>
+            Babies come from the union of a sperm and an egg, which develop together inside the uterus until birth.
+        </p>
+    </section>
+
     <script>
         const swiperEl = document.querySelector('swiper-container')
         Object.assign(swiperEl, {
@@ -127,7 +136,7 @@
 
             nathanPlayBtn.addEventListener('click', (e) => {
                 e.preventDefault()
-                nathanSong.classList.remove('hidden')
+                nathanSong.classList.toggle('hidden')
             })
         });
     </script>

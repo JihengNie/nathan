@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
     nathanPlayBtn.addEventListener('click', (e) => {
         e.preventDefault()
-        nathanSong.classList.remove('hidden')
+        console.log('clicked')
+        nathanSong.classList.toggle('hidden')
     })
 });
